@@ -1,0 +1,1 @@
+#Watir::Browser.default = 'chrome'
