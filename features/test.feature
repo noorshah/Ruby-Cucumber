@@ -1,5 +1,5 @@
 Feature: Test
-Scenario:
-	Given I am noot
-	When I got married
-	Then I got fat
+Scenario: Test
+	Given I am on google
+	When I enter apple pie
+	Then I get apple pie recipe

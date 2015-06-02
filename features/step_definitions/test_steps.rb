@@ -1,14 +1,11 @@
-Given(/^I am noot$/) do
-  Watir::Browser.default = 'chrome'
-  @browser = Watir::Browser.new
-
-  @browser.goto "http://google.com"
-  end
-
-When(/^I got married$/) do
-  
+Given(/^I am on google$/) do 
+ visit Google_home_page
 end
 
-Then(/^I got fat$/) do
- 
+When(/^I enter apple pie$/) do
+(on Google_home_page).search_for_apple_pie
+end
+
+Then(/^I get apple pie recipe$/) do
+  (on Google_home_page).view_apple_pie_recipes
 end
