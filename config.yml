@@ -1,0 +1,46 @@
+# Access to the data in this file is provided through EnvConfig - see env_config.rb
+
+defaults: &execution_defaults
+  default_config: sit
+
+
+  google_maps: /
+
+
+
+pre:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+prod:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+sit:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+test1:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+test2:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+test3:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+test4:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+test5:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+
+uat:
+  <<: *execution_defaults
+  base_url: http://google.co.uk
+

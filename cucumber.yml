@@ -1,0 +1,2 @@
+default: -f pretty --format junit --out=TestResults -t ~@manual -t ~@wip -t ~@not_started -t ~@failing -t ~@flickering <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
+all: -f pretty  --format junit --out=TestResults -t ~@manual -t ~@wip -t ~@not_started -t ~@failing <%= "-t " + ENV['TAGS'] unless ENV['TAGS'].nil? %>
