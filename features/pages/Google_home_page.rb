@@ -8,6 +8,7 @@ class Google_home_page < Base_page
 
   def search_for_apple_pie
     self.search_field='apple pie'
+    self.send_keys
   end
   
   def view_apple_pie_recipes

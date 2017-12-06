@@ -1,7 +1,7 @@
 # Access to the data in this file is provided through EnvConfig - see env_config.rb
 
 defaults: &execution_defaults
-  default_config: sit
+  default_config: test1
 
 
   google_maps: /
@@ -22,11 +22,11 @@ sit:
 
 test1:
   <<: *execution_defaults
-  base_url: http://google.co.uk
+  base_url: http://google.fr
 
 test2:
   <<: *execution_defaults
-  base_url: http://google.co.uk
+  base_url: http://google.ae
 
 test3:
   <<: *execution_defaults
