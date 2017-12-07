@@ -26,26 +26,13 @@ EnvConfig
     # Get the current config setting from the environment. It should be passed in from the command line eg. CONFIG=ci (see rakefile)
     # It will use default_config from config.yaml if nothing is passed in.
     @environment = ENV['CONFIG']
-
-    if @environment.nil?
-      @environment = config_file.fetch('defaults').fetch('default_config') # .fetch() will fail an error if the keys aren't found.
-      abort("No CONFIG supplied from command line, and no default_config found in config.yml") if @environment.nil?
-    end
-
-    # Load in data files from /features/support/data/*
-    @test_data = {}
-
-    Dir[File.dirname(__FILE__) + '/../features/support/data/*.yml'].each do |f|
-      puts "Loading test data YAML from data directory..."
-
-      data = YAML.load(File.open(f))
-      @test_data.merge!(data)
-
-      puts "Loaded #{f}"
-    end
+x
+      if @environment.nil?
+        @environment = config_file.fetch('defaults').fetch('default_config') # .fetch() will fail an error if the keys aren't found.
+        abort("No CONFIG supplied from command line, and no default_config found in config.yml") if @environment.nil?
+      end
 
     @config = config_file[environment]
-    # @config['data'] = @test_data
   end
 
   def self.[](key_name)
@@ -58,10 +45,6 @@ EnvConfig
 
   def self.config
     instance.config
-  end
-
-  def self.data
-    instance.value_for('data')
   end
 
   def value_for(key_name)

@@ -1,0 +1,7 @@
+production: 'https://www.google.com'
+
+staging: 'https://www.google.com.pk'
+
+test: 'https://www.google.fr'
+
+development: 'https://www.google.co.uk'
